@@ -33,6 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Colour = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Shape = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Canvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,11 +95,33 @@
             this.Colour.TabIndex = 4;
             this.Colour.SelectedIndexChanged += new System.EventHandler(this.Colour_SelectedIndexChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(34, 361);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 32);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Shape";
+            // 
+            // Shape
+            // 
+            this.Shape.FormattingEnabled = true;
+            this.Shape.Items.AddRange(new object[] {
+            "Line",
+            "Rectangle"});
+            this.Shape.Location = new System.Drawing.Point(12, 426);
+            this.Shape.Name = "Shape";
+            this.Shape.Size = new System.Drawing.Size(373, 40);
+            this.Shape.TabIndex = 6;
+            // 
             // OOPDraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1594, 853);
+            this.Controls.Add(this.Shape);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.Colour);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -118,6 +142,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox Colour;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox Shape;
     }
 }
 
