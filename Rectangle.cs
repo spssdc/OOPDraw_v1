@@ -4,7 +4,7 @@ using System.Drawing;
 namespace OOPDraw
 {
     // Declare new class type called Rectangle
-    public class Rectangle
+    public class Rectangle : Shape
     {
         // Set up class attirbutes as publicly accesible, but only privately changeable
         public Pen Pen { get; private set; }
@@ -31,7 +31,7 @@ namespace OOPDraw
         }
 
         // publicly invokable method that can be applied to a line
-        public void Draw(Graphics g)
+        public override void Draw(Graphics g)
         {
             int x = Math.Min(X1, X2);
             int y = Math.Min(Y1, Y2);
@@ -41,7 +41,7 @@ namespace OOPDraw
         }
 
         // publicly invokable method that can be applied to a line
-        public void GrowTo(int x2, int y2)
+        public override void GrowTo(int x2, int y2)
         {
             X2 = x2;
             Y2 = y2;

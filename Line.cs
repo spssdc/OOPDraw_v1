@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Drawing;
+﻿using System.Drawing;
+using System;
 
 namespace OOPDraw
 {
     // Declare new class type called Line
-    public class Line
+    public class Line : Shape
     {
         // Set up class attirbutes as publicly accesible, but only privately changeable
         public Pen Pen { get; private set; }
@@ -36,13 +34,13 @@ namespace OOPDraw
         }
 
         // publicly invokable method that can be applied to a line
-        public void Draw(Graphics g)
+        public override void Draw(Graphics g)
         {
-            g.DrawLine(Pen, X1, Y1, X2, Y2);
+            g.DrawLine(Pen, X1,Y1,X2,Y2);
         }
 
         // publicly invokable method that can be applied to a line
-        public void GrowTo(int x2, int y2)
+        public override void GrowTo(int x2, int y2)
         {
             X2 = x2;
             Y2 = y2;

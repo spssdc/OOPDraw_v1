@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Colour = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Shape = new System.Windows.Forms.ComboBox();
+            this.ShapeOpt = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Canvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,23 +104,23 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Shape";
             // 
-            // Shape
+            // ShapeOpt
             // 
-            this.Shape.FormattingEnabled = true;
-            this.Shape.Items.AddRange(new object[] {
+            this.ShapeOpt.FormattingEnabled = true;
+            this.ShapeOpt.Items.AddRange(new object[] {
             "Line",
             "Rectangle"});
-            this.Shape.Location = new System.Drawing.Point(12, 426);
-            this.Shape.Name = "Shape";
-            this.Shape.Size = new System.Drawing.Size(373, 40);
-            this.Shape.TabIndex = 6;
+            this.ShapeOpt.Location = new System.Drawing.Point(12, 426);
+            this.ShapeOpt.Name = "ShapeOpt";
+            this.ShapeOpt.Size = new System.Drawing.Size(373, 40);
+            this.ShapeOpt.TabIndex = 6;
             // 
             // OOPDraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1594, 853);
-            this.Controls.Add(this.Shape);
+            this.Controls.Add(this.ShapeOpt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Colour);
             this.Controls.Add(this.label2);
@@ -143,7 +143,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox Colour;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox Shape;
+        private System.Windows.Forms.ComboBox ShapeOpt;
     }
 }
 

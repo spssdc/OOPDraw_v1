@@ -18,15 +18,14 @@ namespace OOPDraw
             DoubleBuffered = true;  // Stops image flickering
             LineWidth.SelectedItem = "Medium";
             Colour.SelectedItem = "Green";
-            Shape.SelectedItem = "Line";
+            ShapeOpt.SelectedItem = "Line";
         }
 
         Pen currentPen = new Pen(Color.Black);  // set up pen parameters
         bool dragging = false;                  // not initially in drag mode
         Point startOfDrag = Point.Empty;        // initialise line start point
         Point lastMousePosition = Point.Empty;  // initialise most position
-        // create list of type object (Dynamic typing)
-        List<Object> shapes = new List<Object>();    
+        private List<Shape> shapes = new List<Shape>();    
 
         private void Canvas_Paint(object sender, PaintEventArgs e)
         {
@@ -44,7 +43,7 @@ namespace OOPDraw
             startOfDrag = lastMousePosition = e.Location;
             
             // Switch on type of shape selected in combo box
-            switch (Shape.Text)
+            switch (ShapeOpt.Text)
             {
                 case "Line":
                     shapes.Add(new Line(currentPen, e.X, e.Y));  // initialise line (point)
@@ -59,6 +58,7 @@ namespace OOPDraw
         {
             if (dragging)
             {
+
                 dynamic shape = shapes.Last();    // list function for last item
                 shape.GrowTo(e.X, e.Y);           // invoke method to update the line
                 lastMousePosition = e.Location;
